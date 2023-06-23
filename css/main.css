@@ -1,0 +1,26 @@
+/*
+COLOR SCHEME
+LIGHT MODE:
+BG-COLOR: #99CED3;
+FONT: #5F6366;
+ACCENT FONT: #4D6D9A;
+ACCENT PINK: #EDB5BF;
+ACCENT BLUE: #86B3D1;
+
+DARK MODE: 
+BG-COLOR: #5F6366;
+FONT: #99CED3;
+ACCENT FONT: #4D6D9A;
+ACCENT PINK: #EDB5BF;
+ACCENT BLUE: #86B3D1;
+*/
+
+#header {
+    background-color: #99CED3;
+}
+
+#social_media_links {
+    float: left;
+    font-size: 3em;
+    color: #5F6366;
+}
