@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,38 +10,104 @@
     <title>Katherine Moore</title>
     <link rel="canonical" href="#"> <!--Specifies the URL shown-->
 
+    <!--STYLESHEETS-->
+    <link href="css/reset.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="css/main.css" rel="stylesheet">
 
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="scripts/theme_toggle.js"></script>
 </head>
 
 <body>
-    <header id="header">
-        <nav class="navbar navbar-expand-md fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">LOGO</a> <!--LOGO-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="#navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <header class="navbar navbar-expand-lg bd-navbar sticky-top" id="header">
+        <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 
-                <div class="collapse navbar-collapse" id="navMenu">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
+            <a class="navbar-brand" href="index.html">LOGO</a> <!--LOGO-->
+
+            <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+                <svg class="bi" aria-hidden="true"><use xlink:href="#three-dots"></use></svg>
+            </button>
+
+            <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+                <div class="offcanvas-header px-4 pb-0">
+                    <h5 class="offcanvas-title" id="bdNavbarOffcanvasLabel">TITLE</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+                </div>
+                <div class="offcanvas-body p-4 pt-0 p-lg-0">
+                    <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                        <li class="nav item col-6 col-lg-auto">
                             <a class="nav-link" href="#">Home</a> <!--Add in links-->
                         </li>
-                        <li class="nav-item">
+                        <li class="nav item col-6 col-lg-auto">
                             <a class="nav-link" href="#">Portfolio</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav item col-6 col-lg-auto">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
-                    </ul>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
+                                <svg class="bi my-1 theme-icon-active">
+                                    <use href="#sun-fill"></use>
+                                </svg>
+                                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
+                                        <svg class="bi me-2 opacity-50 theme-icon">
+                                            <use href="#sun-fill"></use>
+                                        </svg>
+                                        Light
+                                        <svg class="bi ms-auto d-none">
+                                            <use href="#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50 theme-icon">
+                                            <use href="#moon-stars-fill"></use>
+                                        </svg>
+                                        Dark
+                                        <svg class="bi ms-auto d-none">
+                                            <use href="#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50 theme-icon">
+                                            <use href="#circle-half"></use>
+                                        </svg>
+                                        Auto
+                                        <svg class="bi ms-auto d-none">
+                                            <use href="#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul> 
                 </div>
             </div>
         </nav>
     </header>
 
+    <div class="container my-5 py-5" id="jumbotron">
+        <div class="text-center rounded-3">
+            <img src=""> <!--Top image on page-->
+            <h1>Katherine Moore</h1>
+            <hr>
+            <h2>Full Stack Developer</h2>
+            <p class="col-lg-8 mx-auto">This is where I put a fancy tag line.</p>
+        </div>
+    </div>
     <main role="main" class="container">
 
     </main>

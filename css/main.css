@@ -13,10 +13,20 @@ FONT: #99CED3;
 ACCENT FONT: #4D6D9A;
 ACCENT PINK: #EDB5BF;
 ACCENT BLUE: #86B3D1;
+
+FONTS
+font-family: 'PT Sans', sans-serif;
+font-family: 'PT Serif', serif;
 */
 
-#header {
-    background-color: #99CED3;
+body {
+    background-color: #FFF;
+    color: #5F6366;
+    font: 1rem 'PT Sans', sans-serif;
+}
+
+*a:hover {
+    background-color: #EDB5BF;
 }
 
 #social_media_links {
@@ -24,3 +34,39 @@ ACCENT BLUE: #86B3D1;
     font-size: 3em;
     color: #5F6366;
 }
+
+#jumbotron {
+    line-height: 1.5;
+}
+
+#jumbotron h1 {
+    font: 6rem 'PT Serif', serif;
+}
+
+#jumbotron h2 {
+    font: 4rem 'PT Serif', serif;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-color: var(--bs-white);
+    --bs-body-color-rgb: #{to-rgb($white)};
+    --bs-body-bg: var(--bs-blue);
+    --bs-body-bg-rgb: #{to-rgb($blue)};
+    --bs-tertiary-bg: #{$blue-600};
+  
+    .dropdown-menu {
+      --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
+      --bs-dropdown-link-active-bg: #{$blue-700};
+    }
+  
+    .btn-secondary {
+      --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
+      --bs-btn-border-color: #{rgba($white, .25)};
+      --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};
+      --bs-btn-hover-border-color: #{rgba($white, .25)};
+      --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, .5), 10%)};
+      --bs-btn-active-border-color: #{rgba($white, .5)};
+      --bs-btn-focus-border-color: #{rgba($white, .5)};
+      --bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);
+    }
+  }
