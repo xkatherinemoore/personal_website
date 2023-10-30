@@ -25,6 +25,10 @@ body {
     font: 1rem 'PT Sans', sans-serif;
 }
 
+.nav-links .active {
+    background-color: #86B3D1;
+}
+
 #social_media_links {
     font-size: 3em;
     color: #5F6366;
