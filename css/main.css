@@ -25,14 +25,16 @@ body {
     font: 1rem 'PT Sans', sans-serif;
 }
 
-*a:hover {
-    background-color: #EDB5BF;
-}
-
 #social_media_links {
-    float: left;
     font-size: 3em;
     color: #5F6366;
+    position: absolute;
+    top: 30%;
+    margin: auto 5px;
+}
+
+#social_media_links a {
+    display: block;
 }
 
 #jumbotron {
@@ -45,9 +47,4 @@ body {
 
 #jumbotron h2 {
     font: 4rem 'PT Serif', serif;
-}
-
-#social_media_links {
-    display: block;
-    float: left;
 }
